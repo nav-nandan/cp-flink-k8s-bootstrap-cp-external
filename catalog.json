@@ -1,0 +1,22 @@
+{
+   "apiVersion": "cmf.confluent.io/v1",
+   "kind": "KafkaCatalog",
+   "metadata": {
+     "name": "kafka-cat"
+   },
+   "spec": {
+     "srInstance": {
+       "connectionConfig": {
+         "schema.registry.url": "http://host.minikube.internal:8081"
+       }
+     },
+     "kafkaClusters": [
+       {
+         "databaseName": "kafka-1",
+         "connectionConfig": {
+           "bootstrap.servers": "host.minikube.internal:9092"
+         }
+       }
+     ]
+   }
+ }
