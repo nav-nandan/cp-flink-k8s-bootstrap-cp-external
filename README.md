@@ -132,7 +132,7 @@ confluent flink environment list --url $CONFLUENT_CMF_URL
   flink-sql | confluent            | 2025-07-15 05:07:36.862 +0000  | 2025-07-15 05:07:36.862 +0000   
             |                      | UTC                            | UTC                             
 
-confluent flink compute-pool create flink/compute-pool.json --environment env1 --url http://localhost:8080
+confluent flink compute-pool create compute-pool.json --environment env1 --url http://localhost:8080
 
 confluent flink compute-pool list --url $CONFLUENT_CMF_URL --environment flink-sql
        Creation Time       | Name |   Type    |   Phase    
