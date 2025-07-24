@@ -82,7 +82,7 @@ cat /etc/hosts
 minikube ssh
 docker@minikube:~$ ip a | grep inet
 
-## Verify the Minikube gateway hostname is resolvable to host IP and respective Confluent Platform services are accessible
+## Verify the Minikube gateway hostname is resolvable to host IP and respective Confluent Platform services are accessible from within Minikube
 minikube ssh
 
 docker@minikube:~$ nslookup host.minikube.internal
