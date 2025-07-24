@@ -13,7 +13,7 @@ Overall design of the set up describing a cp-flink deployment on K8s that bootst
 Clone the repo and set working directory
 ```
 git clone https://github.com/nav-nandan/cp-flink-on-k8s-bootstrap-to-external-cp.git
-cd cp-flink-k8s-bootstrap-cp-external
+cd cp-flink-on-k8s-bootstrap-to-external-cp
 ```
 
 Ensure Docker (and/or Docker Desktop) is running locally
