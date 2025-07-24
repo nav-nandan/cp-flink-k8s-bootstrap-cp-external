@@ -39,21 +39,14 @@ services:
     image: confluentinc/cp-schema-registry:7.9.2
     hostname: schema-registry
     container_name: schema-registry
-    restart: always
+    ports:
+      - "8085:8085"
     depends_on:
       - broker
-    ports:
-      - "8081:8081"
-      - "39999:39999"
     environment:
       SCHEMA_REGISTRY_HOST_NAME: schema-registry
-      SCHEMA_REGISTRY_LISTENERS: http://0.0.0.0:8081
-      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: broker:9092
-      SCHEMA_REGISTRY_JMX_PORT: 39999
-      SCHEMA_REGISTRY_JMX_HOSTNAME: schema-registry
-      SCHEMA_REGISTRY_JMX_OPTS: "-Dcom.sun.management.jmxremote.rmi.port=39999 -Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=schema-registry"
-    volumes:
-      - ./libs/:/usr/share/java/schema-registry-plugins/csfle
+      SCHEMA_REGISTRY_LISTENERS: http://schema-registry:8085
+      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: PLAINTEXT://broker:9092
 
   minio:
     image: minio/minio:latest
