@@ -7,7 +7,7 @@
    "spec": {
      "srInstance": {
        "connectionConfig": {
-         "schema.registry.url": "http://host.minikube.internal:8081"
+         "schema.registry.url": "http://host.minikube.internal:8085"
        }
      },
      "kafkaClusters": [
